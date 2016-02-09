@@ -1,0 +1,5 @@
+.emacs.d/.python-environments/*
+.emacs.d/backup/*
+*.elc
+.emacs.d/elpa/auto-complete*/dict/*
+.emacs.d/elpa/yasnippet*
