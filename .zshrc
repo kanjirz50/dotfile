@@ -2,6 +2,7 @@
 alias sort="LC_ALL=C sort"
 alias uniq="LC_ALL=C uniq"
 alias ls="ls --color=auto"
+alias weather="curl wttr.in/Nagaoka"
 
 # export
 export LANG=ja_JP.UTF-8
@@ -9,8 +10,11 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"/usr/local/lib"
 export PATH="/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
+export PATH="$HOME/.ndenv/bin:$PATH"
+
 eval "$(pyenv init -)"
 eval "$(rbenv init -)"
+eval "$(ndenv init -)"
 
 if [ $HOST = "newdelhi.nagaokaut.ac.jp" ]; then
     export HTTP_PROXY=http://proxy.nagaokaut.ac.jp:8080
@@ -139,9 +143,15 @@ local p_mark="%B%(?,%F{green},%F{red})%(!,#,%%)%f%b"
 PROMPT="$p_cdir$p_rhst$p_info $p_mark "
 
 precmd(){
-    PROMPT='%B%K{green}$(__git_ps1 "[%s]")%k%b'
-    PROMPT+="$p_info $p_mark "
-    RPROMPT="%B%K{magenta}[%35<..<%~]%k%b"
+    PROMPT="%F{blue}┌─%f"
+    PROMPT+="%F{blue}[%f%F{yellow}%n%f%F{blue}@%f%F{cyan}%m%f%F{blue}]%f - "
+    PROMPT+="[%35<..<%~]"
+    PROMPT+=$'\n'
+    PROMPT+="%F{blue}└─"
+    PROMPT+="[%f$p_mark%F{blue}]%f"
+    PROMPT+='%F{magenta}$(__git_ps1 " - [%s]")%f'
+    PROMPT+=' '
+
 }
 
 # Emacs like key bind
