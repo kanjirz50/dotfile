@@ -15,6 +15,11 @@ zplug "junegunn/fzf-bin", \
     as:command, \
     rename-to:fzf, \
     use:"*darwin*amd64*"
+zplug "junegunn/fzf", \
+    use:shell/completion.zsh
+zplug "junegunn/fzf", \
+    as:command, \
+    use:bin/fzf-tmux
 
 zplug "peco/peco", \
     as:command, \
@@ -27,3 +32,6 @@ zplug "so-fancy/diff-so-fancy", \
 
 zplug "zsh-users/zaw"
 
+zplug "b4b4r07/enhancd", use:init.sh
+
+zplug "mollifier/cd-gitroot"
