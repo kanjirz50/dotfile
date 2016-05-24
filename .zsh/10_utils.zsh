@@ -1,5 +1,8 @@
 source ~/.zsh/git-prompt.sh
 
+export PYENV_ROOT=$HOME/.pyenv
+export PYENV_JEDI=$PYENV_ROOT/shims/jediepcserver
+export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(rbenv init -)"
 eval "$(ndenv init -)"

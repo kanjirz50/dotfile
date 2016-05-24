@@ -5,8 +5,6 @@
 (el-get-bundle smartrep)
 (el-get-bundle auto-highlight-symbol)
 (el-get-bundle elpa:hlinum)
-(el-get-bundle zenburn-theme
-  :url "https://raw.githubusercontent.com/bbatsov/zenburn-emacs/master/zenburn-theme.el")
 (el-get-bundle volatile-highlights)
 (el-get-bundle highlight-symbol)
 (el-get-bundle popwin)
@@ -41,6 +39,8 @@
 (el-get-bundle yasnippet)
 (el-get-bundle flycheck)
 
-
-
-
+;; python
+(el-get-bundle jedi)
+(el-get-bundle py-autopep8)
+(el-get-bundle python-pylint)
+(el-get-bundle highlight-indentation)
