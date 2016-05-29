@@ -5,9 +5,9 @@
 ;(smooth-scroll-mode t)
 
 ;; hlinum
-(hlinum-activate)
-(global-linum-mode t)
-(setq linum-format "%4d ")
+;; (hlinum-activate)
+;; (global-linum-mode t)
+;; (setq linum-format "%4d ")
 
 ;; Yet Another Scroll Bar Mode
 (global-yascroll-bar-mode 1)

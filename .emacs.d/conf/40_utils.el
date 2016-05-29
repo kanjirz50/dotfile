@@ -4,15 +4,19 @@
 (global-undo-tree-mode t)
 
 ;; projectile with helm
-(projectile-global-mode)
-(setq projectile-completion-system 'helm)
-(helm-projectile-on)
+;; (projectile-global-mode)
+;; (setq projectile-completion-system 'helm)
+;; (helm-projectile-on)
+;;(require 'helm-config)
+;;(helm-mode 1)
 
 ;; anzu
 (global-anzu-mode +1)
 
 ;; pathの引き継ぎ
-(exec-path-from-shell-initialize)
+;(exec-path-from-shell-initialize)
+
+;(require 'zlc)
 
 ;============================
 ;履歴やバッファ
