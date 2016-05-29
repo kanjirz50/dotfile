@@ -1,21 +1,19 @@
-;; load-path で ~/.emacs.d とか書かなくてよくなる
-(when load-file-name
-  (setq user-emacs-directory (file-name-directory load-file-name)))
-
 ;; el-get
-(add-to-list 'load-path (locate-user-emacs-file "~/.emacs.d/el-get/el-get"))
-(unless (require 'el-get nil 'noerror)
-  (with-current-buffer
-      (url-retrieve-synchronously
-       "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
-    (goto-char (point-max))
-    (eval-print-last-sexp)))
+(add-to-list 'load-path "~/.emacs.d/el-get")
+(setq el-get-dir "~/.emacs.d/el-get-packages")
+;(setq el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
+;(setq el-get-user-package-directory "~/.emacs.d/el-get-init-files")
+(require 'el-get)
 
-;; (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
-;; (el-get 'sync)
+(el-get 'sync)
 
-(el-get-bundle init-loader)
-(require 'init-loader)
-(init-loader-load "~/.emacs.d/conf")
 
+(add-to-list 'load-path "~/.emacs.d/site-packages/emacs-async")
+(add-to-list 'load-path "~/.emacs.d/site-packages/helm")
+(require 'helm-config)
+(helm-mode 1)
+
+(el-get-bundle init-loader
+  :features init-loader
+  (init-loader-load "~/.emacs.d/conf"))
 
