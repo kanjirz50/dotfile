@@ -9,11 +9,11 @@ autoload history-search-end
 export LANG=ja_JP.UTF-8
 
 # PROXY
-export HTTP_PROXY=http://proxy.nagaokaut.ac.jp:8080
-export HTTPS_PROXY=https://proxy.nagaokaut.ac.jp:8080
-export http_proxy=$HTTP_PROXY
-export https_proxy=https://proxy.nagaokaut.ac.jp:8080
-export proxy=$HTTP_PROXY
+# export HTTP_PROXY=http://proxy.nagaokaut.ac.jp:8080
+# export HTTPS_PROXY=https://proxy.nagaokaut.ac.jp:8080
+# export http_proxy=$HTTP_PROXY
+# export https_proxy=https://proxy.nagaokaut.ac.jp:8080
+# export proxy=$HTTP_PROXY
 
 # COLOR
 export TERM="xterm-256color"
