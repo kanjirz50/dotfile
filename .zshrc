@@ -67,7 +67,7 @@ function unset_proxy(){
 }
 
 # SCHOOL
-if [ test `domainname` = "monolith" ] ; then
+if [ `domainname` = "monolith" ] ; then
     echo "nagaokaut settings..."
     # python en
     export PYENV_ROOT="/lab/takahashi/master/python_env/pyenv"
