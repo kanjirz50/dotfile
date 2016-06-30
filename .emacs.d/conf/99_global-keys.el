@@ -23,3 +23,6 @@
 
 ;再起動無しで、.emacsを再読み込み
 (global-set-key "\M-p" 'eval-current-buffer)
+
+;関数の折りたたみ
+(define-key global-map (kbd "C-\\") 'hs-toggle-hiding)

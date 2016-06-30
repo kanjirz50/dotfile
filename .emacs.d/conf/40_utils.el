@@ -1,14 +1,5 @@
 ;; 40_utils.el
 
-;; undo-tree-mode
-(global-undo-tree-mode t)
-
-;; anzu
-(global-anzu-mode +1)
-
-;; pathの引き継ぎ
-(exec-path-from-shell-initialize)
-
 ;(require 'zlc)
 
 ;============================
@@ -42,6 +33,11 @@
 
 ;;; 終了時にオートセーブファイルを消す
 (setq delete-auto-save-files t)
+
+;; テンプレート
+(auto-insert-mode)
+(setq auto-insert-directory "~/.emacs.d/template/")
+(define-auto-insert "\\.py$" "python-template.py")
 
 ;=================================
 ;保存

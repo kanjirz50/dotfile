@@ -11,20 +11,16 @@
 (add-hook 'python-mode-hook 'highlight-indentation-mode)
 (set-face-background 'highlight-indentation-face "#383835")
 
-;(require 'python-pylint)
+;; jedi
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
 
 (setq jedi:setup-keys t)
 (setq jedi:server-command '("~/.pyenv/shims/jediepcserver"))
 
+
 (add-hook 'python-mode-hook
 	  '(lambda ()
-	     ;(setq indent-level 4)
-	     ;(setq python-indent 4)
-	     ; (setq python-indent-offset 4)
-	     ;(setq indent-tabs-mode nil)
-	     ;(setq tab-width 4)
 	     (jedi:setup)
 	     (define-key python-mode-map (kbd "<C-tab>") 'jedi:complete)
 	     (define-key python-mode-map (kbd "C-c u") 'jedi:goto-definition)
@@ -35,8 +31,8 @@
 	     (add-to-list 'ac-sources 'ac-source-filename)
 	     (add-to-list 'ac-sources 'ac-source-jedi-direct)
 	     (highlight-indentation-mode t)
+	     (hs-minor-mode t)
 	     )
 	  )
 
-; (define-key python-mode-map (kbd "<C-tab>" 'jedi:complete))
 
