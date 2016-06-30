@@ -50,10 +50,10 @@ function unset_proxy(){
 
 # SCHOOL
 if [ `domainname` = "monolith" ] ; then
-    echo "nagaokaut settings..."
+    # echo "nagaokaut settings..." 1>&2
     # python en
     export PYENV_ROOT="/lab/takahashi/master/python_env/pyenv"
-    PATH="/tools/env/bin:$PYENV_ROOT/bin:$PATH"
+    PATH="/tools/env/bin:$PYENV_ROOT/bin:/lab/takahashi/tools/bin:/lab/takahashi/tools/drake/bin:$PATH"
     export PATH
     eval "$(pyenv init -)"
 
@@ -62,7 +62,7 @@ if [ `domainname` = "monolith" ] ; then
 
     set_proxy
 else
-    echo 'local settings'
+    # echo 'local settings' 1>&2
     export PYENV_ROOT=$HOME/.pyenv
     export PATH="$PYENV_ROOT/bin:$PATH"
     eval "$(pyenv init -)"
