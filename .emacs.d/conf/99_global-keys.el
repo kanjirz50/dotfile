@@ -14,15 +14,11 @@
 (global-set-key (kbd "C-x C-p") 'previous-buffer)
 (global-set-key (kbd "C-x C-n") 'next-buffer)
 
-;PageUp,PageDown
-(global-set-key (kbd "C-x p") 'scroll-up-command)
-(global-set-key (kbd "C-x v") 'scroll-down-command)
-
 ;指定の行に映る
 (global-set-key "\M-g" 'goto-line)
 
 ;再起動無しで、.emacsを再読み込み
 (global-set-key "\M-p" 'eval-current-buffer)
 
-;関数の折りたたみ
-(define-key global-map (kbd "C-\\") 'hs-toggle-hiding)
+;; ;関数の折りたたみ
+;; (define-key global-map (kbd "C-\\") 'hs-toggle-hiding)
