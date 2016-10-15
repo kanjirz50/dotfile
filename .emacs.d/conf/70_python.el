@@ -12,7 +12,7 @@
 	     (define-key python-mode-map (kbd "C-c u") 'jedi:goto-definition)
 	     (define-key python-mode-map (kbd "C-c ?") 'jedi:show-doc)
 	     (define-key python-mode-map (kbd "C-c ,") 'jedi:goto-definition-pop-marker)
-	     
+
 	     (define-key python-mode-map (kbd "C-c F") 'py-autopep8)          ; バッファ全体のコード整形
 	     (define-key python-mode-map (kbd "C-c f") 'py-autopep8-region)
 
@@ -23,12 +23,12 @@
 		   (delete 'ac-source-words-in-same-mode-buffers ac-sources))
 	     (add-to-list 'ac-sources 'ac-source-filename)
 	     (add-to-list 'ac-sources 'ac-source-jedi-direct)
-	     
+
 	     (highlight-indentation-mode t)
 	     (set-face-background 'highlight-indentation-face "#383835")
-	     
-	     (hs-minor-mode t)
-	     )
-	  )
 
+	     (hs-minor-mode t)
+
+	     (py-autopep8-enable-on-save)
+	     ))
 

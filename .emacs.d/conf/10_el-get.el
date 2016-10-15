@@ -27,8 +27,7 @@
 	popwin:special-display-config)
   (global-set-key (kbd "C-x C-j") 'direx:jump-to-directory-other-window))
 
-(el-get-bundle py-autopep8
-  (py-autopep8-enable-on-save))
+(el-get-bundle py-autopep8)
 
 ;; complete
 (el-get-bundle auto-complete)
@@ -58,8 +57,12 @@
 ;; (el-get-bundle flycheck-pos-tip
 ;;   (with-eval-after-load 'flycheck
 ;;   (flycheck-pos-tip-mode)))
-;; ;; C
-;; (el-get-bundle auto-complete-c-headers)
-;; ;; (el-get-bundle irony-mode)
-;; ;; (el-get-bundle company-irony)
-;; (el-get-bundle auto-complete-clang)
+;; C
+(el-get-bundle emacs-clang-complete-async
+  :type github
+  :pkgname "Golevka/emacs-clang-complete-async"
+  :build (("make"))
+  :features "auto-complete-clang-async"
+  )
+(el-get-bundle auto-complete-c-headers)
+(el-get-bundle auto-complete-clang)
