@@ -53,12 +53,13 @@ if [ `domainname` = "monolith" ] ; then
     # echo "nagaokaut settings..." 1>&2
     # python en
     export PYENV_ROOT="/lab/takahashi/master/python_env/pyenv"
-    PATH="/tools/env/bin:$PYENV_ROOT/bin:/lab/takahashi/tools/bin:/lab/takahashi/tools/drake/bin:$PATH"
+    PATH="/usr/local/cuda/bin:/tools/env/bin:$PYENV_ROOT/bin:/lab/takahashi/tools/bin:/lab/takahashi/tools/drake/bin:$PATH"
+    LD_LIBRARY_PATH=/tools/snowman/library/boost/python3/boost_1_61_0/stage/lib/:$LD_LIBRARY_PATH
     export PATH
     eval "$(pyenv init -)"
 
     # load self compiled emacs
-    alias emacs=/lab/takahashi/env/bin/emacs
+    alias emacs=/tools/env/bin/emacs
 
     set_proxy
 else

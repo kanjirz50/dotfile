@@ -24,9 +24,9 @@ zplug "zsh-users/zsh-history-substring-search"
 zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf
 zplug "junegunn/fzf", rename-to:fzf-completion, use:shell/completion.zsh
 zplug "junegunn/fzf", as:command, rename-to:fzf-tmux, use:bin/fzf-tmux
-zplug "so-fancy/diff-so-fancy", as:command, use:diff-so-fancy
+# zplug "so-fancy/diff-so-fancy", as:command, use:diff-so-fancy
 zplug "zsh-users/zaw"
-zplug "b4b4r07/enhancd", use:init.sh
+# zplug "b4b4r07/enhancd", use:init.sh
 zplug "mollifier/cd-gitroot"
 # Can manage local plugins
 zplug "~/.zsh", from:local
@@ -42,4 +42,4 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load --verbose
 
-
+. /lab/takahashi/tools/torch/install/bin/torch-activate
